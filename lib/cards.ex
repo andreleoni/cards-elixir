@@ -24,6 +24,16 @@ defmodule Cards do
 
   @doc """
     Check if a deck of cards containers a specific card
+
+  ## Examples
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Ace of Spades")
+      true
+
+      iex> deck = Cards.create_deck
+      iex> Cards.contains?(deck, "Whatever other card")
+      false
   """
   def contains?(deck, card) do
     Enum.member?(deck, card)
